@@ -34,12 +34,12 @@ the presence of a `session[:user_id]`, and `current_user` returns the instance
 of the logged in user, based on the `session[:user_id]`. We have six actions
 defined:
 
-* `get "/"` renders an `index.erb` file with links to signup or login.
-* `get '/signup'` renders a form to create a new user. The form includes fields for `username` and `password`.
-* `get '/login'` renders a form for logging in.
-* `get '/success'` renders a `success.erb` page, which should be displayed once a user successfully logs in.
-* `get '/failure'` renders a `failure.erb` page. This will be accessed if there is an error logging in or signing up.
-* `get '/logout'` clears the session data and redirects to the homepage.
+- `get "/"` renders an `index.erb` file with links to signup or login.
+- `get '/signup'` renders a form to create a new user. The form includes fields for `username` and `password`.
+- `get '/login'` renders a form for logging in.
+- `get '/success'` renders a `success.erb` page, which should be displayed once a user successfully logs in.
+- `get '/failure'` renders a `failure.erb` page. This will be accessed if there is an error logging in or signing up.
+- `get '/logout'` clears the session data and redirects to the homepage.
 
 We've also stubbed out a user model in `app/models/user.rb` that inherits from
 `ActiveRecord::Base`.
@@ -179,7 +179,7 @@ we told Ruby to add an `authenticate` method to our class (invisibly!) when the
 program runs. While we, as programmers can't see it, **it will be there**.
 
 > **ASIDE** This is one of the special powers of Ruby called
-> "_metaprogramming_:" writing code that writes code.  Ruby code can run
+> "_metaprogramming_:" writing code that writes code. Ruby code can run
 > methods _on itself_ so that classes gain new methods or state when the code
 > runs! Pretty cool! Ruby and only a few other languages have this ability.
 >
@@ -223,13 +223,9 @@ end
 Awesome job! We've now built out a basic authentication system for a user
 without storing a plain-text password in our database.
 
-## Video Review
-
-* [Authentication](https://www.youtube.com/watch?v=_S1s6R-_wYc)
-
 ## Resources
 
-* [BCrypt Ruby](https://github.com/codahale/bcrypt-ruby)
-* [Intro to BCrypt & Password Security](https://www.youtube.com/watch?v=O6cmuiTBZVs) - MakerSquare on YouTube
-* [Ruby on Rails Guide: Has Secure Password](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
-* [How NOT to Store Passwords!](https://www.youtube.com/watch?v=8ZtInClXe1Q) - Computerphile on Youtube
+- [BCrypt Ruby](https://github.com/codahale/bcrypt-ruby)
+- [Intro to BCrypt & Password Security](https://www.youtube.com/watch?v=O6cmuiTBZVs) - MakerSquare on YouTube
+- [Ruby on Rails Guide: Has Secure Password](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
+- [How NOT to Store Passwords!](https://www.youtube.com/watch?v=8ZtInClXe1Q) - Computerphile on Youtube
